@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0b3f34">
+  <meta name="description" content="SlipBloom — สมุดรายรับรายจ่ายสำหรับร้านเล็ก เริ่มบันทึกจากรูปสลิปหรือเพิ่มรายการด้วยตัวเอง">
+  <title>SlipBloom — เงินร้านดูง่ายขึ้น</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./refined.css">
+</head>
+<body>
+  <svg class="sprite" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 11 9-7 9 7v9H3zM9 20v-6h6v6"/></symbol>
+    <symbol id="i-list" viewBox="0 0 24 24"><path d="M7 5h14M7 12h14M7 19h14M3 5h.01M3 12h.01M3 19h.01"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 19V5m0 14h17M8 15l4-4 3 2 5-7"/></symbol>
+    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M3 7h4l2-3h6l2 3h4v13H3z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+    <symbol id="i-gallery" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="1"/><path d="m4 18 5-5 3 3 4-5 4 5"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="m12 2 9 4v6c0 5-3 8-9 10-6-2-9-5-9-10V6z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6"/></symbol>
+  </svg>
+  <div class="site-shell">
+    <aside class="desktop-aside" aria-label="เกี่ยวกับ SlipBloom">
+      <div class="desktop-brand">SlipBloom<span>.</span></div>
+      <div class="desktop-copy"><div class="small-kicker">YOUR SHOP, IN THE CLEAR</div><h1>เงินร้าน<br>เบ่งบาน<span>.</span></h1><p>จากรูปสลิปหนึ่งใบ สู่ภาพรวมเงินร้านที่อ่านง่ายและไว้ใจได้</p><div class="desktop-pills"><span>บันทึกไว</span><span>ตรวจทุกยอด</span><span>เห็นภาพชัด</span></div></div>
+      <div class="desktop-mark" aria-hidden="true"><span class="mark-leaf mark-one"></span><span class="mark-leaf mark-two"></span><span class="mark-leaf mark-three"></span><span class="mark-stem"></span></div>
+      <div class="aside-note">A LITTLE CLARITY, EVERY DAY · SLIPBLOOM</div>
+    </aside>
+    <main class="app" id="app">
+      <div id="screen" class="screen" aria-live="polite"></div>
+      <nav class="bottom-nav" aria-label="เมนูหลัก">
+        <button data-nav="home" type="button"><svg><use href="#i-home"/></svg><span>หน้าหลัก</span></button>
+        <button data-nav="ledger" type="button"><svg><use href="#i-list"/></svg><span>รายการ</span></button>
+        <button data-nav="insights" type="button"><svg><use href="#i-chart"/></svg><span>สรุป</span></button>
+      </nav>
+    </main>
+  </div>
+  <input id="camera-input" class="visually-hidden" type="file" accept="image/*" capture="environment">
+  <input id="gallery-input" class="visually-hidden" type="file" accept="image/png,image/jpeg,image/webp">
+  <script src="./app.js" defer></script>
+</body>
+</html>
